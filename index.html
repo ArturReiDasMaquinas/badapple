@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bad Apple!! no Super Nintendo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=IBM+Plex+Sans:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3f3f1; --ink:#161616; --apple:#d6203a;
+    --font-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    --font-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){ :root{ --paper:#111; --ink:#f3f3f1; } }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.5;
+       padding:clamp(16px,4vw,48px);min-height:100vh}
+  main{max-width:960px;margin:0 auto}
+  h1{font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,7vw,4.5rem);
+     line-height:.95;letter-spacing:-.03em;margin:0 0 .4em}
+  .lead{max-width:52ch;margin:0 0 1.5rem;font-size:1.05rem}
+  .screen{border:2px solid var(--ink);background:#000;width:100%;aspect-ratio:8/7;max-height:75vh;margin:0 auto}
+  #game{width:100%;height:100%}
+  footer{margin-top:1rem;font-size:.9rem;opacity:.75}
+</style>
+</head>
+<body>
+<main>
+  <h1>Bad Apple!!<br>no Super Nintendo</h1>
+  <p class="lead">O clipe em preto e branco rodando numa ROM de SNES. Clique no botão de play dentro do emulador para começar.</p>
+  <div class="screen"><div id="game"></div></div>
+  <footer>Clique dentro do emulador para ativar o som.</footer>
+</main>
+
+<script>
+  EJS_player = "#game";
+  EJS_core = "snes";
+  EJS_gameUrl = "roms/badapple.sfc";
+  EJS_gameName = "Bad Apple";
+  EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+  EJS_startOnLoaded = false;
+</script>
+<script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
+</html>
